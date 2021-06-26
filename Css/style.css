@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	color: #ffffff;
+	color: white;
 }
 
 #spantext {
@@ -16,27 +16,37 @@ body {
 }
 
 .navi {
-	float: right;
+	float: left;
 }
 
 .exc {
-	color: palegreen;
-}
-
-#piz-IN {
-	font-family: 'Shadows Into Light', cursive;
-	font-size: 50px;
-	font-weight: normal;
-	color: darkorange;
+	color: orangered;
 }
 
 li {
 	display: inline;
-	margin-right: 50px;
+	margin-right: 40px;
 }
 
 li a{
 	text-decoration: none;
 	color: black;
-	font-size: 30px;
+	font-size: 40px;
+}
+
+.landing {
+	background-image: url('../Images/Pizza5.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 700px;
+	width: 100%;
+	text-align: center;
+	padding: 365px;
+}
+
+.home{
+	background-color: rgb(85, 82, 82);
+	height: 700px;
+	width: 100%;
 }
