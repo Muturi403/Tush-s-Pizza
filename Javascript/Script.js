@@ -12,7 +12,7 @@ $(document).ready(function () {
     //---------------------------Price:flavour--------------------->
     Pizza.prototype.getFlavourPrice = function () {
         if (this.size === "regular") {
-            if (this.flavour === "beef-pepporoni") {
+            if (this.flavour === "beef-pepperoni") {
                 return 300;
             } else if (this.flavour === "cheese-pizza") {
                 return 500;
@@ -26,11 +26,11 @@ $(document).ready(function () {
                 return 320;
             }
         } else if (this.size === "medium") {
-            if (this.flavour === "beef-pepporoni") {
+            if (this.flavour === "beef-pepperoni") {
                 return 500;
             } else if (this.flavour === "cheese-pizza") {
                 return 750;
-            } else if (this.fllavour === "chicken-hawaiian") {
+            } else if (this.flavour === "chicken-hawaiian") {
                 return 550;
             } else if (this.flavour === "macon-bbq") {
                 return 560;
@@ -40,11 +40,11 @@ $(document).ready(function () {
                 return 400;
             }
         } else if (this.size === "large") {
-            if (this.flavour === "beef-pepporoni") {
+            if (this.flavour === "beef-pepperoni") {
                 return 650;
             } else if (this.flavour === "cheese-pizza") {
                 return 900;
-            } else if (this.fllavour === "chicken-hawaiian") {
+            } else if (this.flavour === "chicken-hawaiian") {
                 return 700;
             } else if (this.flavour === "macon-bbq") {
                 return 650;
@@ -54,11 +54,11 @@ $(document).ready(function () {
                 return 500;
             }
         } else if (this.size === "extra-large") {
-            if (this.flavour === "beef-pepporoni") {
+            if (this.flavour === "beef-pepperoni") {
                 return 800;
             } else if (this.flavour === "cheese-pizza") {
                 return 1100;
-            } else if (this.fllavour === "chicken-hawaiian") {
+            } else if (this.flavour === "chicken-hawaiian") {
                 return 850;
             } else if (this.flavour === "macon-bbq") {
                 return 770;
