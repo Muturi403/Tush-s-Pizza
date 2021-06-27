@@ -156,3 +156,116 @@ $(document).ready(function () {
             }
         }
     };
+     //-------------------------- customer's order---------------->
+    var customerName = "";
+    var totalCost = 0;
+    var pizzasOrdered = [];
+    var subCounty = "";
+    var landmark = "";
+    var contactNumber = "";
+
+    $("#order-form").submit(function (e) {
+        e.preventDefault();
+        console.log("click", $("#flavour").val())
+        var flavourSelected = $("#flavour").val();
+        var sizeSelected = $("#size").val();
+        var toppingSelected = $("#topping").val();
+        var crustSelected = $("#crust").val();
+
+        var newPizza = new Pizza(
+            flavourSelected,
+            sizeSelected,
+            toppingSelected,
+            crustSelected
+        );
+
+        pizzasOrdered.push(newPizza);
+        $("#flavour").val("");
+        $("#size").val("");
+        $("#topping").val("");
+        $("#crust").val("");
+
+        totalCost = 0;
+
+        for (let i = 0; i < pizzasOrdered.length; i++) {
+            totalCost += pizzasOrdered[i].getPizzaPrice();
+        }
+        console.log(newPizza)
+        console.log(newPizza.flavour)
+        console.log(newPizza.getFlavourPrice())
+        $("#bill-summary").append(
+            "<tr>" +
+            '<th scope="row">' +
+            newPizza.flavour +
+            " -" +
+            newPizza.getFlavourPrice() +
+            "</th>" +
+            "<td>" +
+            newPizza.toppings +
+            " - " +
+            newPizza.getToppingPrice() +
+            "</td>" +
+            "<td>" +
+            newPizza.crust +
+            " - " +
+            newPizza.getCrustPrice() +
+            "</td>" +
+            "<td>" +
+            newPizza.size +
+            "</td>" +
+            "<td>" +
+            newPizza.getPizzaPrice() +
+            "</td>" +
+            "</tr>"
+        );
+
+        if (pizzasOrdered.length > 0) {
+            $("#form-title").empty();
+            $("#form-title").append("Add Another Order");
+        }
+
+        $("#total-amount").fadeIn();
+        $("#checkout").fadeIn();
+        $("#orders-div").fadeIn();
+
+        $("#total-amount").empty();
+        $("#total-amount").append(totalCost);
+        $(".total-amount").show();
+    });
+
+    $("#checkout").click(function () {
+        $(".checkout-options").show();
+    });
+
+    $("#checkout-form").submit(function (e) {
+        e.preventDefault();
+        var name = $("#name").val();
+        var deliveryOption = $("#delivery-option").val();
+        customerName = name;
+        console.log(name);
+        console.log(deliveryOption);
+        $("#name").val("");
+        $("#delivery-option").val("");
+        $(".checkout-options").hide();
+        if (deliveryOption === "deliver") {
+            $(".location").show();
+            $(".delivery-cost").show();
+            $("#delivery-amount").append(250);
+            totalCost += 250;
+            $("#total-amount").empty();
+            $("#total-amount").append(totalCost);
+        } else {
+            alert(customerName + ": Your total bill is Ksh. " + totalCost + ". Your order will be ready for collection in the next 2 hours");
+        }
+        $("#delivery-form1").submit(function (e) {
+            e.preventDefault();
+            var estateEntered = $("#landmark").val();
+            var subcounty = $("#location").val();
+            var contactNumberEntered = $("#contact-number").val();
+            estate = estateEntered;
+            contactNumber = contactNumberEntered;
+            $(".location").hide();
+            alert(customerName + ": Your total bill is Ksh. " + totalCost + ". Your order will be delivered to " + subcounty + ", " + contactNumber + " in the next 2 hours");
+        });
+    });
+});
