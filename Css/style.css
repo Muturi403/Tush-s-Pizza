@@ -45,8 +45,33 @@ li a{
 	padding: 365px;
 }
 
-.home{
-	background-color: rgb(85, 82, 82);
-	height: 700px;
-	width: 100%;
+#form-title {
+	padding-top: 05px;
+}
+
+#row {
+	background-image: url("../Images/Logo1.png");
+	background-repeat: no-repeat;
+}
+
+#rd {
+	color: crimson;
+	font-size: 25px;
+}
+
+#rd1 {
+	color: white;
+
+}
+
+footer {
+	background-color: crimson;
+}
+
+#title {
+	color: orangered;
+}
+
+#label {
+	color: orangered;
 }
