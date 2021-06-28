@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+.navbar{
+	background-color: rgba(128, 118, 115, 0.212);
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -43,6 +47,10 @@ li a{
 	width: 100%;
 	text-align: center;
 	padding: 365px;
+}
+
+.overlay{
+	background-color: rgba(78, 70, 67, 0.13);
 }
 
 #form-title {
