@@ -30,10 +30,10 @@ There are no bugs.
 
 ## Technologies Used
 
-* HTML
-* CSS
-* BOOTSTRAP
-* JQUERY
+* Html
+* Css
+* Bootstrap
+* Jquery
 * Javascript
 
 ## Support and contact details
