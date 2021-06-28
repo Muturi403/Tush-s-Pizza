@@ -42,5 +42,5 @@ Email : fayshiks1234@gmail.com
 
 ## License
 
-*License under the [MIT LICENSE](LISENCE.txt)* copyright (c) 2021
+*License under the [MIT LICENSE](LICENSE.txt)* copyright (c) 2021
 **Muturi .F. Wanjiru**
